@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"lib": ["es2017"],
+		"types": ["node"],
+		"moduleResolution": "node",
+		"module": "commonjs",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"sourceMap": true,
+		"target": "es2017",
+		"outDir": "dist",
+		"allowSyntheticDefaultImports": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"preserveSymlinks": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules"]
+}

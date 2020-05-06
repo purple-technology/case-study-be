@@ -1,0 +1,43 @@
+{
+	"name": "case-study-be",
+	"private": true,
+	"scripts": {
+		"dev": "nodemon ./src/index.ts --exec ts-node",
+		"start": "NODE_ENV=production tsc src/index.ts",
+		"lint": "eslint . --ext .ts,.js,.jsx,.json",
+		"lint:fix": "eslint . --ext .ts,.js,.jsx,.json --fix"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.15.3",
+		"express-graphql": "^0.9.0",
+		"graphql": "^15.0.0",
+		"mongodb": "^3.5.7",
+		"morgan": "^1.10.0",
+		"require-graphql-file": "^1.0.1"
+	},
+	"devDependencies": {
+		"@types/cors": "^2.8.6",
+		"@types/express": "^4.17.6",
+		"@types/express-graphql": "^0.9.0",
+		"@types/graphql": "^14.5.0",
+		"@types/mongodb": "^3.5.14",
+		"@types/morgan": "^1.9.0",
+		"@types/node": "^13.13.4",
+		"@typescript-eslint/eslint-plugin": "^2.31.0",
+		"@typescript-eslint/parser": "^2.23.0",
+		"eslint": "^6.8.0",
+		"eslint-config-airbnb-base": "^14.1.0",
+		"eslint-config-prettier": "^6.10.0",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-simple-import-sort": "^5.0.1",
+		"nodemon": "^2.0.3",
+		"prettier": "^2.0.2",
+		"ts-node": "^8.10.1",
+		"typescript": "^3.8.3"
+	}
+}
