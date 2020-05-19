@@ -8,8 +8,8 @@ interface Input {
 }
 
 export default async ({ id }: Input): Promise<RequestResponse> => {
-	const db = getDb()
-	// @ts-ignore
+	const db = await getDb()
+	console.log(id)
 	await db.collection('todo').deleteOne({ _id: new ObjectID(id) })
 	return {
 		status: RequestResult.SUCCESS
