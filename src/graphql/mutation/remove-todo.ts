@@ -8,7 +8,7 @@ interface Input {
 }
 
 export default async ({ id }: Input): Promise<RequestResponse> => {
-	const db = getDb()
+	const db = await getDb() /* must be await because of async getdb function - guessing */
 	// @ts-ignore
 	await db.collection('todo').deleteOne({ _id: new ObjectID(id) })
 	return {
