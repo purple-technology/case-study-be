@@ -1,0 +1,5 @@
+On back-end I found 3 bugs
+
+in add function was typo - todi/todo
+missing asynchrouns calling with getting pointer of database
+date.now was in bad scope, it wasnt in function -> it caused that now was still same
