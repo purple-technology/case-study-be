@@ -5,10 +5,10 @@ interface Input {
 	text: string
 }
 
-const now = Date.now()
 
 export default async ({ text }: Input): Promise<RequestResponse> => {
 	const db = await getDb()
+	const now = Date.now()
 	const todo: Todo = {
 		text,
 		checked: false,
