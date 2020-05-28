@@ -5,7 +5,8 @@
 		"dev": "nodemon ./src/index.ts --exec ts-node",
 		"start": "NODE_ENV=production tsc src/index.ts",
 		"lint": "eslint . --ext .ts,.js,.jsx,.json",
-		"lint:fix": "eslint . --ext .ts,.js,.jsx,.json --fix"
+		"lint:fix": "eslint . --ext .ts,.js,.jsx,.json --fix",
+		"commit": "git-cz"
 	},
 	"dependencies": {
 		"body-parser": "^1.19.0",
@@ -28,6 +29,7 @@
 		"@types/node": "^13.13.4",
 		"@typescript-eslint/eslint-plugin": "^2.31.0",
 		"@typescript-eslint/parser": "^2.23.0",
+		"cz-conventional-changelog": "^3.2.0",
 		"eslint": "^6.8.0",
 		"eslint-config-airbnb-base": "^14.1.0",
 		"eslint-config-prettier": "^6.10.0",
@@ -35,9 +37,24 @@
 		"eslint-plugin-prettier": "^3.1.2",
 		"eslint-plugin-react": "^7.19.0",
 		"eslint-plugin-simple-import-sort": "^5.0.1",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.6",
 		"nodemon": "^2.0.3",
 		"prettier": "^2.0.2",
 		"ts-node": "^8.10.1",
 		"typescript": "^3.8.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,js,jsx,json}": "npm run lint:fix"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
