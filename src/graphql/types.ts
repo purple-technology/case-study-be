@@ -3,6 +3,7 @@ export interface Todo {
 	text: string
 	createdTimestamp: number
 	checked: boolean
+	priority: string
 }
 
 export interface RequestResponse {

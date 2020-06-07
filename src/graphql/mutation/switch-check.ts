@@ -4,7 +4,8 @@ import { getDb } from '../../lib/mongo'
 import { RequestResponse, RequestResult } from '../types'
 
 interface Input {
-	id: string
+	id: string,
+	priority: string
 }
 
 export default async ({ id }: Input): Promise<RequestResponse> => {
