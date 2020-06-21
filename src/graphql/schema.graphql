@@ -9,6 +9,7 @@ type Mutation {
 	addTodo(text: String!): Status
 	switchCheck(id: ID!): Status
 	removeTodo(id: ID!): Status
+	completeAll: Status
 }
 
 type Status {
