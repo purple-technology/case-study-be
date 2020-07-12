@@ -14,7 +14,7 @@ export default async ({ text }: Input): Promise<RequestResponse> => {
 		checked: false,
 		createdTimestamp: now
 	}
-	await db.collection('todi').insertOne(todo)
+	await db.collection('todo').insertOne(todo)
 	return {
 		status: RequestResult.SUCCESS
 	}

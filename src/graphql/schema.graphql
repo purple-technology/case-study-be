@@ -13,7 +13,7 @@ type Mutation {
 
 type Status {
 	status: StatusType!
-	error: String
+	error: String!
 }
 
 type Todo {
