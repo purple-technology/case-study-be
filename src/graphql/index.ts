@@ -3,6 +3,7 @@ import { buildSchema } from 'graphql'
 import * as requireGraphQLFile from 'require-graphql-file'
 
 import addTodo from './mutation/add-todo'
+import clearCompleted from './mutation/clear-completed'
 import removeTodo from './mutation/remove-todo'
 import switchCheck from './mutation/switch-check'
 import todos from './query/todos'
@@ -15,6 +16,7 @@ export default graphqlHTTP({
 		todos,
 		addTodo,
 		removeTodo,
-		switchCheck
+		switchCheck,
+		clearCompleted
 	}
 })
